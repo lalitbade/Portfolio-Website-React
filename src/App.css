@@ -1,38 +1,90 @@
-.App {
+/* src/App.css */
+
+/* Reset margin and padding for HTML and body */
+html, body {
+  height: 100%; /* Ensure full height for the entire viewport */
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+/* global-styles.css */
+
+/* For webkit-based browsers like Chrome and Safari */
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(22, 134, 134);
+  border-radius: 10px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: rgb(22, 134, 134) black;
+}
+
+/* Ensure #root takes full viewport height */
+#root {
+  height: 100%;
+}
+
+/* Ensure the entire app container takes full viewport height */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Minimum height of viewport */
+  position: relative; /* Ensure position relative for absolute positioning of footer */
+}
+
+/* Content area to fill remaining vertical space */
+.content {
+  flex: 1; /* Fill remaining vertical space */
+  padding: 20px; /* Example padding */
+  position: relative; /* Ensure content is in the flow and respects other positioning */
+  z-index: 1; /* Ensure content is above footer */
+}
+
+/* Example styling for NavBar, adjust as needed */
+.navbar {
+  background-color: #282c34;
+  color: white;
+  padding: 10px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar a:hover {
+  text-decoration: underline;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* src/App.css */
+
+/* Reset margin and padding for HTML and body */
+html, body {
+  height: 100%; /* Ensure full height for the entire viewport */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ensure the entire app container takes full viewport height */
+.app-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh; /* Minimum height of viewport */
 }
 
-.App-link {
-  color: #61dafb;
+/* Content area to fill remaining vertical space */
+.content {
+  flex: 1; /* Fill remaining vertical space */
+  overflow-y: auto; /* Enable scrolling for content */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+

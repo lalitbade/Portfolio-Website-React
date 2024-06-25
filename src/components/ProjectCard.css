@@ -1,0 +1,80 @@
+.project-card {
+  width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border: 5px solid #0e9c9c;
+    transition: transform 0.3s ease-in-out;
+    
+  }
+  
+  .card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px); /* Adjust blur amount as needed */
+    z-index: -1;
+    border: 2px solid #0e9c9c;
+  }
+  
+  .card-content {
+    position: relative;
+    z-index: 1; /* Ensure card content is above the blur overlay */
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.1); /* Adjust opacity and color as needed */
+  }
+  
+  .card-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .card-content p {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  
+  .card-content a {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    text-align: center;
+    color: #0e9c9c;
+    font-weight: bold;
+  }
+  h4{
+    color: #0e9c9c;
+
+  }
+  .card-content a:hover {
+    text-decoration: underline;
+  }
+  .card-image img {
+    background-color: black;
+    contain: content;
+    width: 100%;
+    height: 150px;
+    display: block;
+  }
+  .btn{
+    height: 40px;
+    width: 120px;
+    background-color: rgb(0, 0, 0);
+    border: 2px solid #0e9c9c;
+    text-align: center;
+  }
+  .btn a{
+    margin-top: 0px;
+  }
+
+  @media (max-width: 576px) {
+    .project-card{
+      text-align: center;
+      margin-left: 30px;
+    }
+  }

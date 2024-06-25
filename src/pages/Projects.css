@@ -1,0 +1,97 @@
+.image-fluid {
+    position: relative;
+    background-image: url('../images/clint-patterson-dYEuFB8KQJk-unsplash.jpg'); /* Adjust the path accordingly */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    
+    overflow: hidden; /* Ensure overflow doesn't disrupt the blur effect */
+  }
+  .image-overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  
+  .project-card {
+    margin-bottom: 30px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+    z-index: 1; /* Ensure cards are above the blurred background */
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .project-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .project-card .card-body {
+    padding: 20px;
+  }
+  
+  .project-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-card .card-text {
+    font-size: 1rem;
+    color: #666;
+  }
+  
+  .project-card .card-text strong {
+    font-weight: bold;
+  }
+  
+  .project-card .btn-primary {
+    background-color: rgb(22, 134, 134);
+    border-color: rgb(22, 134, 134);
+  }
+  
+  .project-card .btn-primary:hover {
+    background-color: #0e9c9c;
+    border-color: #0e9c9c;
+  }
+  /* Projects.css */
+
+.projects-page {
+  margin-top: 80px; /* Adjust this value as needed to create space */
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+
+}
+
+/* Adjusting spacing for project cards */
+@media (max-width: 576px) {
+  .project-cards-container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+@media (min-width: 768px) {
+  .project-cards-container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .project-cards-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}

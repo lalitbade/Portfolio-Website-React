@@ -1,0 +1,90 @@
+/* src/NavBar.css */
+.navbar-container {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+  box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  backdrop-filter: blur(10px); /* Apply blur effect */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 1000; /* Ensure Navbar is above other content */
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.menu-item {
+  margin-right: 25px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 19px;
+  height: 40px;
+}
+
+.menu-item a {
+  text-decoration: none;
+  color: white;
+}
+
+.menu-item i {
+  margin-right: 8px;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px; /* Adjust top position as needed */
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: rgb(255, 253, 253);
+  margin: 4px 0;
+}
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: rgba(0, 0, 0); /* Semi-transparent background */
+    padding: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999; /* Ensure menu is above other content */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu-item {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
